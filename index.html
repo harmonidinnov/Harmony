@@ -1,0 +1,453 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>Harmony Cabins Retreat</title>
+      
+      <!-- bootstrap css -->
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <!-- style css -->
+      <link rel="stylesheet" href="css/style.css">
+      <!-- Responsive-->
+      <link rel="stylesheet" href="css/responsive.css">
+      <!-- fevicon -->
+      <link rel="icon" href="images/fevicon.png" type="image/gif" />
+      <!-- Scrollbar Custom CSS -->
+      <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+
+      <link rel="stylesheet" href="css/nice-select.css">
+
+      <!-- Tweaks for older IEs-->
+      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+      
+   </head>
+   <!-- body -->
+   <body class="main-layout">
+      <!-- loader  -->
+      <div class="loader_bg">
+         <div class="loader"><img src="images/loading.gif" alt="#" /></div>
+      </div>
+      <!-- end loader -->
+      <!-- header -->
+      <header>
+         <!-- header inner -->
+         <div class="header">
+            <div class="container">
+               <div class="row">
+                  <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
+                     <div class="full">
+                        <div class="center-desk">
+                           <div class="logo">
+                              <a href="index.html"><img src="images/20240303_221300_0000-removebg-preview.png" alt="#" /></a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
+                     <nav class="navigation navbar navbar-expand-md navbar-dark ">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarsExample04">
+                           <ul class="navbar-nav mr-auto">
+                              <li class="nav-item">
+                                 <a class="nav-link" href="accomodation.html">Accommodation</a>
+                              </li>
+                              <li class="nav-item">
+                                 <a class="nav-link" href="activity.html">Activities</a>
+                              </li>
+                              <li class="nav-item">
+                                 <a class="nav-link" href="wedding.html">Weddings</a>
+                              </li>
+                              <li class="nav-item">
+                                 <a class="nav-link" href="spa.html">Spa</a>
+                              </li>
+                              <li class="nav-item">
+                                 <a class="nav-link" href="about.html">About</a>
+                              </li>
+                              <li class="nav-item">
+                                 <a class="nav-link" href="#contact">Contact us</a>
+                              </li>
+                           </ul>
+                           
+                        </div>
+                     </nav>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </header>
+      <!-- end header inner -->
+      <!-- end header -->
+      <!-- banner -->
+      <section class="banner_main">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="text-bg">
+                     <div class="padding_lert">
+                        <h1>WELCOME TO HARMONY CABINS RETREAT </h1>
+                        <span>PEACEFUL BREAK-AWAY</span>
+                        
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- end banner -->
+      <section>
+         <div class="container">     
+            <form class="form_book" id="bookingForm">
+               <div class="col-md-3">
+                  <label class="title">Price Per guest: <b>R<span id="guest_price">889</span></b></label>
+              </div>
+               <div class="col-md-3">
+                   <label class="date">ARRIVAL DATE</label>
+                   <input class="book_n" id="arrivalDate" type="date">
+               </div>
+               <div class="col-md-3">
+                   <label class="date">DEPARTURE DATE</label>
+                   <input class="book_n" id="departureDate" type="date">
+               </div>
+               <div class="col-md-3">
+                   <label class="title">Number of guests</label>
+               </div>
+               <div class="col-md-3">
+                   <input class="book_n" id="num" type="text" oninput="calculateTotal()" />
+               </div>
+               <div class="col-md-3">
+                   <label class="title">Subtotal: <b>R<span id="total">0</span></b></label>
+               </div>
+               <div class="col-md-3">
+                   <button class="book_btn" type="button" id="bookButton">Book Now</button>
+               </div>
+           
+           </form>
+           
+           <script>
+           function calculateTotal() {
+               const price = parseFloat(document.getElementById("guest_price").innerText);
+               const numGuests = parseFloat(document.getElementById("num").value);
+               const subtotal = price * numGuests; 
+               document.getElementById("total").innerText = subtotal.toFixed(2);
+           }
+           
+           </script>
+           
+     
+     
+ 
+    
+      <!-- choose  section -->
+      <div class="choose">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-6">
+                  <div class="choose_box">
+                     <div class="titlepage">
+                        <h2><span class="text_norlam">Choose The Perfect</span> <br>Accommodation</h2>
+                     </div>
+                     <p>Luxury Accommodation for up to 60 guests in different accomodation set up. </p>
+                     <a class="read_more" href="accomodation.html">See More</a>
+                  </div>
+               </div>
+               <div class="col-md-6">
+                  <div class="row">
+                     <div class="col-md-12">
+                        <div class="img_box1">
+                           <figure><img src="images/istockphoto-958535136-612x612.jpg" alt="#"/></figure>
+                        </div>
+                     </div>
+                     <div class="col-md-6">
+                        <div class="img_box1">
+                           <figure><img src="images/tinywow_istockphoto-1407250130-612x612_52211406.jpg" alt="#"/></figure>
+                        </div>
+                     </div>
+                     <div class="col-md-6">
+                        <div class="img_box1">
+                           <figure><img src="images/istockphoto-1064158576-612x612.jpg" alt="#"/></figure>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- end choose  section -->
+
+
+<!-- activity  section -->
+<div class="our">
+   <div class="container">
+      <div class="row d_flex">
+         <div class="col-md-6">
+            <div class="img_box">
+               <figure><img src="images/istockphoto-1179176550-612x612.jpg" alt="#"/></figure>
+            </div>
+         </div>
+         <div class="col-md-6">
+            <div class="our_box">
+               <div class="titlepage">
+                  <h2><span class="text_norlam">Our Best </span> <br>Activities</h2>
+               </div>
+               <p>Our day visits is R100.Different Activities for everyone in different age groups.
+               </p>
+               
+               <a class="read_more" href="activity.html">Read More</a>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+<!-- end activity  section -->
+
+<!-- spa  section -->
+<div class="choose">
+   <div class="container">
+      <div class="row">
+         <div class="col-md-6">
+            <div class="choose_box">
+               <div class="titlepage">
+                  <h2><span class="text_norlam">The Perfect Place</span> <br>To Unwind</h2>
+               </div>
+               <p>We bring to you the best massage masters.</p>
+               <a class="read_more" href="spa.html">See More</a>
+            </div>
+         </div>
+         <div class="col-md-6">
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="img_box">
+                     <figure><img src="images/istockphoto-1177283765-612x612.jpg" alt="#"/></figure>
+                  </div>
+               </div>
+               
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+<!-- end spa  section -->
+
+      <!-- our  section -->
+      <div class="our">
+         <div class="container">
+            <div class="row d_flex">
+               <div class="col-md-6">
+                  <div class="img_box">
+                     <figure><img src="images/istockphoto-1219189899-612x612.jpg" alt="#"/></figure>
+                  </div>
+               </div>
+               <div class="col-md-6">
+                  <div class="our_box">
+                     <div class="titlepage">
+                        <h2><span class="text_norlam">Our Best </span> <br>Breakfast And Dining Experience</h2>
+                     </div>
+                     <p> Different dishes for our amazing guests, breakfast R250 pp, dinner R300 pp.</p>
+                    
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- end our  section -->
+
+       <!-- choose  section -->
+       <div class="choose">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-6">
+                  <div class="choose_box">
+                     <div class="titlepage">
+                        <h2><span class="text_norlam">The Perfect Place</span> <br>For Your Wedding</h2>
+                     </div>
+                     <p>You only say "I do" once, then say it in style with beautiful view.Enjoy exclusive use of the resort for you and up to 120 guests.</p>
+                     <a class="read_more" href="wedding.html">See More</a>
+                  </div>
+               </div>
+               <div class="col-md-6">
+                  <div class="row">
+                     <div class="col-md-12">
+                        <div class="img_box">
+                           <figure><img src="images/istockphoto-1241911769-612x612.jpg" alt="#"/></figure>
+                        </div>
+                     </div>
+                     
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- end choose  section -->
+
+      <!-- testimonial -->
+      <div class="testimonial">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="titlepage">
+                     <h2>Testimonial</h2>
+                  </div>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-md-12">
+                  <div id="myCarousel" class="carousel slide testimonial_Carousel " data-ride="carousel">
+                     <ol class="carousel-indicators">
+                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#myCarousel" data-slide-to="1"></li>
+                        <li data-target="#myCarousel" data-slide-to="2"></li>
+                     </ol>
+                     <div class="carousel-inner">
+                        <div class="carousel-item active">
+                           <div class="container">
+                              <div class="carousel-caption ">
+                                 <div class="row">
+                                    <div class="col-md-6 margin_boot">
+                                       <div class="test_box">
+                                          <h4>Layla Jackson</h4>
+                                          <i><img src="images/te1.png" alt="#"/></i>
+                                          <p>Clean place in a forest, I loved their breakfast, service.</p>
+                                       </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                       <div class="test_box">
+                                          <h4>Macdeline Du</h4>
+                                          <i><img src="images/te1.png" alt="#"/></i>
+                                          <p>I loved that they have day visits</p>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="carousel-item">
+                           <div class="container">
+                              <div class="carousel-caption">
+                                 <div class="row">
+                                    <div class="col-md-6 margin_boot">
+                                       <div class="test_box">
+                                          <h4>Maggi Kabini</h4>
+                                          <i><img src="images/te1.png" alt="#"/></i>
+                                          <p>Excellent location for my wedding, everything was amazing</p>
+                                       </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                       <div class="test_box">
+                                          <h4>Mac Du</h4>
+                                          <i><img src="images/te1.png" alt="#"/></i>
+                                          <p>Loved the place but my air conditioner remote in my room was out of battery and it was too hot.</p>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="carousel-item">
+                           <div class="container">
+                              <div class="carousel-caption">
+                                 <div class="row">
+                                    <div class="col-md-6 margin_boot">
+                                       <div class="test_box">
+                                          <h4>Matongo kgwale</h4>
+                                          <i><img src="images/te1.png" alt="#"/></i>
+                                          <p>Very clean,quiet place and has privacy</p>
+                                       </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                       <div class="test_box">
+                                          <h4>Sunny Baloyi</h4>
+                                          <i><img src="images/te1.png" alt="#"/></i>
+                                          <p>Had so much with my family participating in the Activities.</p>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                     <span class="sr-only">Previous</span>
+                     </a>
+                     <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                     <span class="sr-only">Next</span>
+                     </a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- end testimonial -->
+      <!--  footer -->
+      <footer id="contact">
+         <div class="footer">
+            <div class="container">
+               <div class="row">
+                  <div class="col-md-6">
+                     <div class="titlepage">
+                        <h2>Contact Us</h2>
+                     </div>
+                     <div class="cont">
+                        <p>We're always here to help make your resort experience the best it can be! Whether you have questions, need assistance, or just want to say hello, don't hesitate to get in touch. Our team is ready to assist you with anything you need. We can't wait to hear from you!</p>
+                     </div>
+                  </div>
+                  <div class="col-md-6">
+                     <form id="request" class="main_form">
+                        <div class="row">
+                           <div class="col-md-12 ">
+                              <input class="contactus" placeholder="Full Name" type="type" name="Full Name"> 
+                           </div>
+                           <div class="col-md-12">
+                              <input class="contactus" placeholder="Email" type="type" name="Email"> 
+                           </div>
+                           <div class="col-md-12">
+                              <input class="contactus" placeholder="Phone Number" type="type" name="Phone Number">                          
+                           </div>
+                           <div class="col-md-12">
+                              <textarea class="textarea" placeholder="Message" type="type" Message="Name">Message </textarea>
+                           </div>
+                           <div class="col-sm-12">
+                              <button class="send_btn">Send</button>
+                           </div>
+                        </div>
+                     </form>
+                  </div>
+               </div>
+            </div>
+            <div class="copyright">
+               <div class="container">
+                  <div class="row">
+                     <div class="col-md-12">
+                        <p>Copyright @ 2022 </p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </footer>
+      <!-- end footer -->
+      <!-- Javascript files-->
+      <script src="js/jquery.min.js"></script>
+      <script src="js/popper.min.js"></script>
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <script src="js/jquery-3.0.0.min.js"></script>
+      <script src="js/plugin.js"></script>
+      <!-- sidebar -->
+      <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+      <script src="js/custom.js"></script>
+      <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+   </body>
+</html>
+
